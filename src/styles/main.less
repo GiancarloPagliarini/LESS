@@ -1,0 +1,99 @@
+@import './config/reset.less';
+@import './config/variables.less';
+@import './config/mixins.less';
+@import './config/maps.less';
+
+body {
+    background-color: #colors[background];
+    color: #colors[text];
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media @breakpointMobile {
+        width: 80%;
+    }
+
+    @media @breakpointTablet {
+        width: 90%;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    margin-bottom: 24px;
+    
+    .profile-avatar {
+        display: block;
+        margin: 0 auto 24px;
+    }
+}
+
+.profile-bio {
+    text-align: center;
+
+    &-name {
+        .mixinMarginBottomandFs(20px, 18px);
+    }
+
+    &-subtitle {
+        .mixinMarginBottomandFs(10px, 16px);
+    }
+
+    &-discription {
+        .mixinMarginBottomandFs(10px, 16px);
+        opacity: .7;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 240px;
+    width: 100%;
+
+    li {
+        img {
+            transition: all 0.2s ease;
+            &:hover {
+                transform: scale(1.25);
+            }
+        }
+    }
+}
+
+.project-list {
+    margin-top: 32px;
+
+    &-item {
+        
+        a {
+            display: block;
+            text-decoration: none;
+            color: #colors[text];
+            font-weight: bold;
+            background: #colors[button];
+            padding: 18px 20px;
+            margin-bottom: 16px;
+            border-radius: 30px;
+            text-align: center;
+            border: 2px solid #colors[button];
+            transition: all 0.4s ease;
+
+            &:hover {
+                background: #colors[background];
+            }
+        }
+    }
+}
