@@ -36,6 +36,10 @@ header {
 header .profile-avatar {
   display: block;
   margin: 0 auto 24px;
+  transition: all 0.2s ease;
+}
+header .profile-avatar:hover {
+  transform: scale(1.04);
 }
 .profile-bio {
   text-align: center;
